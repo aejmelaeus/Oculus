@@ -8,9 +8,24 @@ Oculus Nodes can be deployed to machines in the system and Nodes can then be ins
 
 The master orchestrates the nodes and assigns different roles to them.
 
+When the `Master` is started following happends:
+
+* Report listeners are started for all registered `Nodes`
+
+When a node appears at the Master:
+
+* The existence is persisted
+* The `Node` is registered as active and are expected to report heart beats
+
 ## Node
 
-A node is a worker in the system. It is deployed to a computer, ie. virtual machine
+A node is a worker in the system. It is deployed to a computer, ie. virtual machine. A Node can have one or many roles.
+
+When a node starts the following happends:
+
+* Appear at `Master`
+* Periodicaly report heart beat and results to `Master`
+* At any time receive new roles
 
 ## Http Role
 
