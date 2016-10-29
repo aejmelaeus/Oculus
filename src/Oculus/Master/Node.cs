@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Master
 {
     public class Node
     {
-        public Guid Id { get; set; }
-        public string Server { get; set; }
+        public string ServerName { get; set; }
         public List<HttpRole> HttpRoles { get; set; }
     }
 }
